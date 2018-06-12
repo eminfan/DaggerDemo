@@ -1,4 +1,4 @@
-package com.example.administrator.daggerdemo.basic1;
+package com.example.administrator.daggerdemo.basic;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.administrator.daggerdemo.R;
-import com.example.administrator.daggerdemo.module2.SecondActivity;
+import com.example.administrator.daggerdemo.module.SecondActivity;
 
 import javax.inject.Inject;
 
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         btnEat = findViewById(R.id.eat);
-        Button next = findViewById(R.id.btn_next_home);
+
         DaggerMainComponent.builder().build().inject(this);
 
         btnEat.setOnClickListener(new View.OnClickListener() {
@@ -36,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "包子馅是"+baozi.type, Toast.LENGTH_SHORT).show();
             }
         });
+
+        Button next = findViewById(R.id.btn_next_home);
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

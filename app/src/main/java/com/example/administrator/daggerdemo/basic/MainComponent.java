@@ -1,4 +1,4 @@
-package com.example.administrator.daggerdemo.basic1;
+package com.example.administrator.daggerdemo.basic;
 
 
 import dagger.Component;

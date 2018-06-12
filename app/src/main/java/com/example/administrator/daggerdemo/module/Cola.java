@@ -1,4 +1,4 @@
-package com.example.administrator.daggerdemo.module2;
+package com.example.administrator.daggerdemo.module;
 
 public class Cola {
     String brand = "百事";
